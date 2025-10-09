@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 permissions:
   scm-token-own: read
   scm-token-org: read
@@ -16,4 +17,3 @@ jobs:
         uses: cloudbees-io/checkout@v1
       - name: njsscan hybrid plugin scan
         uses: cloudbees-io/njsscan-hybrid-plugin@v1
-        
